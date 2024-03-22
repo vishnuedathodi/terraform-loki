@@ -23,7 +23,9 @@ resource "helm_release" "loki" {
   create_namespace = false
   version    = "2.7.0"
   timeout = 2000
-  
+  values = [
+    file("${path.module}/../loki/values.yaml")
+  ]
 
   set {
     name  = "fluent-bit.enabled"
