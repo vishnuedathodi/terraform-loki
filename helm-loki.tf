@@ -16,7 +16,7 @@ resource "null_resource" "example" {
 
 resource "helm_release" "loki" {
  
-  name       = "loki-v1"  
+  name       = "${var.release_name}"  
   repository = "https://grafana.github.io/helm-charts"
   chart      = "loki-stack"
   namespace  = "prometheus"
