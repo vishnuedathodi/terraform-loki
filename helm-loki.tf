@@ -18,7 +18,7 @@ resource "helm_release" "loki" {
  
   name       = "${var.release_name}"  
   repository = "https://grafana.github.io/helm-charts"
-  chart      = "loki-stack"
+  chart      = "grafana/loki-stack"
   namespace  = "prometheus"
   create_namespace = false
   version    = "2.7.0"
