@@ -25,7 +25,7 @@ resource "helm_release" "loki" {
   timeout = 2000
   set {
       name  = "podSecurityPolicy.enabled"
-      value = true
+      value = false
     }
   set {
     name  = "fluent-bit.enabled"
