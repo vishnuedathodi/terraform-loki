@@ -19,9 +19,9 @@ resource "helm_release" "loki" {
   name       = "${var.release_name}"  
   repository = "https://grafana.github.io/helm-charts"
   chart      = "loki-stack"
-  namespace  = "prometheus"
+  namespace  = "loki"
   create_namespace = false
-  version    = "2.8.0"
+  version    = "2.8.7"
   timeout = 2000
   set {
     name  = "fluent-bit.enabled"
