@@ -37,7 +37,7 @@ resource "helm_release" "loki" {
   }
   set {
     name  = "grafana.datasources.enabled"
-    value = false
+    value = true
   }
     
   set {
