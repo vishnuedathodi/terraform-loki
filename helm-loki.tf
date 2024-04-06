@@ -36,6 +36,11 @@ resource "helm_release" "loki" {
     value = false
   }
   set {
+    name  = "grafana.datasources.enabled"
+    value = false
+  }
+    
+  set {
     name = "server\\.resources"
     value = yamlencode({
       limits = {
