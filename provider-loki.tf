@@ -21,10 +21,10 @@ terraform {
 
 
 data "aws_eks_cluster" "installationcluster" {
-  name = "${var.namespace}"
+  name = "${var.cluster_name}"
 }
 data "aws_eks_cluster_auth" "installationcluster" {
-  name = "${var.namespace}"
+  name = "${var.cluster_name}"
 }
 
 
