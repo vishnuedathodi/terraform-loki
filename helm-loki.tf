@@ -33,10 +33,14 @@ resource "helm_release" "loki" {
   }
   set {
     name  = "server.persistentVolume.enabled"
-    value = false
+    value = true
   }
   set {
     name  = "grafana.datasources.enabled"
+    value = true
+  }
+  set {
+    name  = "server.persistence.enabled"
     value = true
   }
     
