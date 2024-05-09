@@ -21,7 +21,7 @@ resource "helm_release" "loki" {
   chart      = "loki-stack"
   namespace  = "${var.namespace}"
   create_namespace = false
-  version    = "2.8.7"
+  #version    = "2.8.7"
   timeout = 2000
   set {
     name  = "fluent-bit.enabled"
