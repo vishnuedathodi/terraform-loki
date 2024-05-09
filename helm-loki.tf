@@ -2,7 +2,7 @@
 resource "time_sleep" "wait_for_kubernetes" {
 
     depends_on = [
-        data.aws_eks_cluster.tg-tekton-eks-cluster
+        data.aws_eks_cluster.installationcluster
     ]
 
     create_duration = "20s"
