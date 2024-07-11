@@ -40,6 +40,10 @@ resource "helm_release" "loki" {
     value = true
   }
   set {
+    name  = "clusterRole.create"
+    value = false
+  }
+  set {
     name  = "server.persistence.enabled"
     value = true
   }
