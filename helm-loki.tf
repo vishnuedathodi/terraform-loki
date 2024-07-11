@@ -40,7 +40,7 @@ resource "helm_release" "loki" {
     value = true
   }
   set {
-    name  = "clusterRole.create"
+    name  = "clusterRole.Create"
     value = false
   }
   set {
